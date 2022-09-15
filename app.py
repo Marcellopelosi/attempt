@@ -93,6 +93,6 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 
 df = pd.read_csv(
-    "https://raw.githubusercontent.com/mcnakhaee/palmerpenguins/master/palmerpenguins/data/penguins.csv"
+    "https://raw.githubusercontent.com/Marcellopelosi/attempt/main/dribbling_stats_world_cup.csv"
 )
 st.dataframe(filter_dataframe(df))
