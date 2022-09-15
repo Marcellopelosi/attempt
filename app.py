@@ -99,5 +99,5 @@ def public_gdrive_csv_to_pandas(url, sep = ";"):
 
 
 link = "https://drive.google.com/file/d/1dZ8unGV2SLsn3K5kUEDb9WEp52htzDoQ/view?usp=sharing"
-public_gdrive_csv_to_pandas(url, sep = ",")
+df = public_gdrive_csv_to_pandas(url, sep = ",")
 st.dataframe(filter_dataframe(df))
