@@ -92,7 +92,6 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-df = pd.read_csv(
-    "https://raw.githubusercontent.com/mcnakhaee/palmerpenguins/master/palmerpenguins/data/penguins.csv"
-)
+df = pd.DataFrame(np.random.randn(100, 4), columns=list('ABCD'))
+
 st.dataframe(filter_dataframe(df))
