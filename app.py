@@ -98,6 +98,6 @@ def public_gdrive_csv_to_pandas(url, sep = ";"):
   return pd.read_csv(path, sep = sep)
 
 
-link = "https://drive.google.com/file/d/1dZ8unGV2SLsn3K5kUEDb9WEp52htzDoQ/view?usp=sharing"
+url = "https://drive.google.com/file/d/1dZ8unGV2SLsn3K5kUEDb9WEp52htzDoQ/view?usp=sharing"
 df = public_gdrive_csv_to_pandas(url, sep = ",")
 st.dataframe(filter_dataframe(df))
