@@ -92,7 +92,12 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+def public_gdrive_csv_to_pandas(url, sep = ";"):
+  '''Restituisce un dataset di tipo pandas a partire da un url associato ad un documento condiviso mediante Google Drive'''
+  path = 'https://drive.google.com/uc?export=download&id='+ url.split('/')[-2]
+  return pd.read_csv(path, sep = sep)
 
-df = pd.DataFrame(np.random.randn(100, 4), columns=list('ABCD'))
 
+link = "https://drive.google.com/file/d/1dZ8unGV2SLsn3K5kUEDb9WEp52htzDoQ/view?usp=sharing"
+public_gdrive_csv_to_pandas(url, sep = ",")
 st.dataframe(filter_dataframe(df))
